@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+  background-color: #f5f5f5;
+}
+
+form {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin: 50px auto;
+  max-width: 500px;
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+label {
+  color: #333;
+  display: block;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+input[type="number"] {
+  background-color: #f5f5f5;
+  border: none;
+  border-radius: 5px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+  color: #333;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+input[type="number"]:focus {
+  box-shadow: inset 0 0 5px #cc0000;
+}
+
+input[type="submit"] {
+  background-color: #cc0000;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover {
+  background-color: #e60000;
+}
+
+.form-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+@media screen and (max-width: 500px) {
+  .form-group {
+    grid-template-columns: 1fr;
+  }
+}
+body {
+    background-image: url('https://images.pexels.com/photos/15362148/pexels-photo-15362148.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* other styles */
+}
+
+
+    </style>
+    
+</head>
+<body>
+    <form action="premiumbatsman.html" method="post" >
+        
+        <label for="min-age">Minimum age:</label>
+        <input type="number" id="minage" name="minage" required>
+        
+        <label for="max-age">Maximum age:</label>
+        <input type="number" id="maxage" name="maxage"  required>
+        
+        <label for="total-runs">Total runs:</label>
+        <input type="number" id="totalruns" name="totalruns" autocomplete="off" required>
+        
+        <label for="average-runs">Average runs:</label>
+        <input type="number" id="averageruns" name="averageruns" required>
+        
+        <label for="half-centuries">Minimum half centuries:</label>
+        <input type="number" id="half" name="half" required>
+        
+        <label for="centuries">Minimum centuries:</label>
+        <input type="number" id="centuries" name="centuries" required>
+        
+        <input type="submit" >
+      </form>
+      
+</body>
+<script type="text/javascript" >
+  
+
+    document.querySelector('form').addEventListener("submit",function (){
+    var minage= document.getElementById('minage').value;
+    var maxage= document.getElementById('maxage').value;
+    var runs= document.getElementById('totalruns').value;
+    var averageruns= document.getElementById('averageruns').value;
+    var half= document.getElementById('half').value;
+    var centuries= document.getElementById('centuries').value;
+    localStorage.setItem("minage",minage);
+    localStorage.setItem("maxage",maxage);
+    localStorage.setItem("runs",runs);
+    localStorage.setItem("averageruns",averageruns);
+    localStorage.setItem("half",half);
+    localStorage.setItem("centuries",centuries);
+  })
+   
+    
+   
+  
+</script>
+</html>

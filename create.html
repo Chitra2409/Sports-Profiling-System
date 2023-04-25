@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign In Page</title>
+	<link rel="stylesheet" type="text/css" href="create.css">
+</head>
+<body>
+	<div class="container">
+		<form  action="create.php" method="post">  
+			<h2>Sign up</h2>
+			<label for="username">Username</label>
+			<input type="text" id="username" name="username">
+			<label for="email">E-mail</label>
+			<input type="text" id="email" name="email">
+			<label for="password">Password</label>
+			<input type="password" id="password" name="password"><br>
+			<button type="submit">Sign up</button>
+			<p> <a href="orgsignup.html">Sign up as Organisation</a></p>
+		</form>
+	
+	</div>
+</body>
+</html>
+<script>
+	document.querySelector('form').addEventListener("submit",function (){
+    var playersignup_email= document.getElementById('email').value;
+    
+    localStorage.setItem("playersignup_email",playersignup_email);
+  })
+</script>
