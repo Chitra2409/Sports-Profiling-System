@@ -1,0 +1,380 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-image: url('https://i.pinimg.com/originals/85/b9/b4/85b9b4605207163aeacdaf78aa30ecb1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  header {
+    background-color: rgb(89, 68, 209);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+  .logo h1{
+      color: rgb(233, 200, 200);
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  nav ul li {
+    margin-right: 20px;
+  }
+  
+  nav ul li:last-child {
+    margin-right: 0;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: rgb(31, 19, 204);
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  nav ul li a:hover {
+    color: #fff;
+    background-color: #16a085;
+    border-radius: 5px;
+    padding: 5px 10px;
+  }
+  
+  main {
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 0 20px;
+  }
+  
+  h1 {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(62, 27, 219);
+    margin: 0;
+    padding: 10px 0;
+    flex-grow: 1;
+  }
+  
+  section {
+    padding: 50px 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  #intro {
+    background-image: url('https://images.pexels.com/photos/4038917/pexels-photo-4038917.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+  }
+  
+  #quotes {
+    background-image: url('https://images.pexels.com/photos/2834917/pexels-photo-2834917.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+  }
+  
+  #services {
+    background-image: url('https://images.pexels.com/photos/2202685/pexels-photo-2202685.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+  }
+  
+  blockquote {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    font-style: italic;
+    color: rgb(201, 22, 22);
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+  }
+  
+  h2 {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    color: rgb(26, 5, 5);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+  }
+  
+  p {
+    font-size: 18px
+  }/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-image: url('https://i.pinimg.com/originals/85/b9/b4/85b9b4605207163aeacdaf78aa30ecb1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    
+  }
+  /*********************************/
+  header {
+   
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: rgb(116, 128, 197);
+  }
+  /*********************************/
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1600px;
+    margin:  auto;
+    padding: 10px 20px;
+    margin-bottom: 0px;
+    background-color: rgb(218, 196, 223);
+    }
+  /*********************************/
+  nav ul {
+    list-style: none;
+   margin-top: 5px;
+  margin-left: 500px;
+  background-color: rgb(218, 196, 223);
+      padding: 0;
+    display: flex;
+  }
+  /*********************************/
+  nav ul li {
+    margin-right: 20px;
+    background-color: rgb(218, 196, 223);    
+  }
+  /*********************************/
+  nav ul li:last-child {
+    margin-right: 0;
+    background-color: rgb(218, 196, 223);
+    }
+  /*********************************/
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
+    background-color: rgb(218, 196, 223);
+
+    margin-left: 10px;
+  }
+  
+  
+  main {
+    margin-top: 100px;
+    background-color: rgb(241, 220, 245);
+  }
+  
+  h1 {
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    
+  }
+  #quote1{
+margin-top: 100px;
+  }
+  .section {
+    padding: 100px 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  
+  }
+  
+  .section-heading {
+    font-size: 32px;
+   
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    margin-bottom: 50px;
+  }
+  
+  .section-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    
+  }
+  .quote h1{
+      color: rgb(234, 241, 245);
+  }
+  .section-content p {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #fff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  .quotes-section {
+    background-image: url('https://images.pexels.com/photos/2834917/pexels-photo-2834917.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+  
+   }
+  
+  .services-section {
+    background-image: url('https://images.pexels.com/photos/4038917/pexels-photo-4038917.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+  }
+  
+  /* Section 2 */
+.section2 {
+    background-image: url('https://images.pexels.com/photos/4038917/pexels-photo-4038917.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+    padding: 50px 0;
+  }
+  
+  .section2 h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+    text-shadow: 1px 1px #333;
+  }
+  
+  .section2 p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  /* Section 3 */
+  .section3 {
+    background-image: url('https://images.pexels.com/photos/2834917/pexels-photo-2834917.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+    padding: 50px 0;
+  }
+  
+  .section3 h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+    text-shadow: 1px 1px #333;
+  }
+  
+  .section3 p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  /* Section 4 */
+  .section4 {
+    background-image: url('https://images.pexels.com/photos/2202685/pexels-photo-2202685.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+    padding: 50px 0;
+  }
+  
+  .section4 h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+    text-shadow: 1px 1px #333;
+  }
+  
+  .section4 p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  body {
+    background-image: url('https://images.pexels.com/photos/15362148/pexels-photo-15362148.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+    
+    /* container element */
+#section-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+  
+  }
+  
+  /* section styles ******************************************/
+  .section {
+    width: 30%;
+    padding: 50px;
+    background-color: rgba(103, 126, 190, 0.8);
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* section heading styles */
+  .section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #1abc9c;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* section text styles */
+  .section p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: rgb(31, 23, 110);
+  }
+  /* CSS */
