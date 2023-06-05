@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Cricket Player Selection</title>
+    <style>
+      /* Add some styles to make it look pretty */
+      body {
+        background: url('https://images.pexels.com/photos/15362148/pexels-photo-15362148.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2 ')no-repeat center center fixed;
+        background-color: #f2f2f2;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-size: cover;
+  font-family: 'Open Sans',
+      }
+      
+      #container {
+  background: linear-gradient(to right, #f0f8ff, #bae8e8);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  margin: 50px auto;
+  max-width: 500px;
+  padding: 30px;
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 36px;
+  margin: 0 0 20px;
+}
+
+label {
+  color: #333;
+  display: block;
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + label {
+  background-color: #eee;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  padding: 10px;
+  margin: 0 10px 10px 0;
+  transition: background-color 0.3s ease-in-out;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+input[type="radio"]:hover + label {
+  background-color: #ddd;
+  transform: translateY(-3px);
+}
+
+input[type="radio"]:checked + label {
+  background-color: #cc0000;
+  color: #fff;
+  transform: scale(1.1);
+  box-shadow: none;
+}
+
+button {
+  background: linear-gradient(to right, #ff8a00, #e52e71);
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease-in-out;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+  background: linear-gradient(to right, #e52e71, #ff8a00);
+  color: #fff;
+  border: 2px solid #fff;
+  transform: translateY(-3px);
+}
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1>What type of cricket player do you want?</h1>
+      <form method="post" action="typeofplayer.php" >
+        <input type="radio" name="playertype" id="batsman" value="batsman">
+        <label for="batsman">Batsman</label>
+        
+        <input type="radio" name="playertype" id="bowler" value="bowler">
+        <label for="bowler">Bowler</label>
+        
+        <input type="radio" name="playertype" id="allrounder" value="allrounder">
+        <label for="allrounder">All Rounder</label>
+        
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

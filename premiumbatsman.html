@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Profiles Page</title>
+
+	<style>
+       
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			
+			padding: 20px;
+            
+		}
+
+		.box {
+			width: 200px;
+			height: 200px;
+			background-color: #babbee;
+			margin: 10px;
+			border: 1px solid #2b0909;
+			border-radius: 5px;
+			box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+			overflow: hidden;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			padding: 10px;
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+		}
+
+		.box img {
+			max-width: 100%;
+			max-height: 80%;
+			object-fit: cover;
+			border-radius: 50%;
+			margin-bottom: 10px;
+		}
+
+		.box h3 {
+			margin: 0;
+			font-weight: normal;
+			font-size: 18px;
+		}
+        body {
+    background-image: url('https://images.pexels.com/photos/15362148/pexels-photo-15362148.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* other styles */
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.box{
+    display: none;
+}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div id="box0" class="box">
+			<img id="img0" src="">
+			<a href="premiumbatsman0.html" id="name0"></a>
+			
+		</div>
+		<div id="box1"class="box">
+			<img id="img1" src="">
+			<a href="premiumbatsman1.html"id="name1"></a>
+			
+		</div>
+		<div id="box2"class="box">
+			<img id="img2" src="">
+			<a href="premiumbatsman2.html"id="name2"></a>
+			
+		</div>
+		<div id="box3"class="box">
+			<img id="img3" src="">
+			<a href="premiumbatsman3.html"id="name3"></a>
+			
+		</div>
+		<div id="box4"class="box">
+			<img id="img4" src="">
+			<a href="premiumbatsman4.html"id="name4"></a>
+			
+		</div>
+		<div id="box5"class="box">
+			<img id="img5" src="">
+			<a href="premiumbatsman5.html"id="name5"></a>
+			
+		</div>
+		<div id="box6"class="box">
+			<img id="img6" src="">
+			<a href="premiumbatsman6.html"id="name6"></a>
+			
+		</div>
+        <div id="box7"class="box">
+			<img id="img7" src="">
+			<a href="premiumbatsman7.html"id="name7"></a>
+			
+		</div>
+        <div id="box8"class="box">
+			<img id="img8" src="">
+			<a href="premiumbatsman8.html"id="name8"></a>
+			
+		</div>
+     <div id="box9"class="box">
+			<img id="img9" src="">
+			<a href="premiumbatsman9.html" id="name9"></a>
+			
+		</div>
+        <div id="box10"class="box">
+			<img id="img10" src="">
+			<a href="premiumbatsman10.html"id="name10"></a>
+			
+		</div>
+        <div id="box11"class="box">
+			<img id="img11" src="">
+			<a href="premiumbatsman11.html"id="name11"></a>
+			
+		</div>
+        <div id="box12"class="box">
+			<img id="img12" src="">
+			<a href="premiumbatsman12.html"id="name12"></a>
+			
+		</div>
+        <div id="box13"class="box">
+			<img id="img13" src="">
+			<a href="premiumbatsman13.html"id="name13"></a>
+			
+		</div>
+        <div id="box14"class="box">
+			<img id="img14" src="">
+			<a href="premiumbatsman14.html"id="name14"></a>
+			
+		</div>
+    </div>
+</body>
+</html>    
+
+
+
+
+<script type="text/javascript">
+    
+   const minage= localStorage.getItem("minage");
+   const maxage= localStorage.getItem("maxage");
+   const runs= localStorage.getItem("runs");
+   const averageruns= localStorage.getItem("averageruns");
+   const half= localStorage.getItem("half");
+   const centuries= localStorage.getItem("centuries");
+  
+
+   const url='alldata.php';
+    
+getdata();
+
+async function getdata(){
+    
+    const response= await fetch(url);
+    const data= await response.json();
+    
+    
+   var data2=[];
+   
+    for(var i=0;i<Object.keys(data).length;i++){
+       
+        if( parseInt(data[i].age) > parseInt(minage) && parseInt(data[i].age)<parseInt(maxage) && parseInt(data[i].runs)>parseInt(runs) && parseInt(data[i].average)>parseInt(averageruns ) && parseInt(data[i].half)>parseInt(half) && parseInt(data[i].centuries)>parseInt(centuries)){
+           data2[i]=data[i];
+           
+           
+           document.getElementById(`img${i}`).src=data[i].passportphoto;
+            document.getElementById(`name${i}`).innerHTML=data[i].name;
+        }
+    }
+
+	for(var j=0;j<Object.keys(data2).length;j++){
+       
+        
+           
+           document.getElementById(`img${j}`).src=data[j].passportphoto;
+            document.getElementById(`name${j}`).innerHTML=data[j].name;
+            document.getElementById(`box${j}`).style.display="flex";
+        
+    }
+    localStorage.setItem("data",JSON.stringify(data2));
+   
+}       
+   
+
+    
+    
+    
+    
+  
+
+</script>
