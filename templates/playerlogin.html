@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<link rel="stylesheet" type="text/css" href="playerlogin.css">
+</head>
+<body>
+	<div class="login-box">
+		<h1>Login</h1>
+		<form action="playerlogin.php" method="post">
+			<label for="username">Username</label>
+			<input type="text" id="username" name="username" placeholder="Enter username" required>
+			<label for="email">E-mail</label>
+			<input type="text" id="email" name="email">
+			<label for="password">Password</label>
+			<input type="password" id="password" name="password" placeholder="Enter password" required>
+
+			<input type="submit" value="Login">
+		</form>
+		<p>New user? <a href="create.html">Sign up</a></p>
+	</div>
+</body>
+</html>
+<script>
+	document.querySelector('form').addEventListener("submit",function (){
+    var playerlogin_email= document.getElementById('email').value;
+    
+    localStorage.setItem("playerlogin_email",playerlogin_email);
+  })
+</script>

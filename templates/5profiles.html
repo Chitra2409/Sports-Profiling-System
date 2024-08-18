@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>player's data</title>
+	<style>
+		body {
+			background-color: #f2f2f2;
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+			line-height: 1.5;
+			margin: 0;
+			padding: 0;
+		}
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			padding: 20px;
+			box-sizing: border-box;
+		}
+        a{
+            text-decoration: none;
+        }
+		.square {
+			width: 250px;
+			height: 200px;
+			margin: 10px;
+			background-color: #fff;
+			box-shadow: 0 0 10px rgba(0,0,0,0.3);
+			border-radius: 10px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor:pointer;
+			overflow:scroll;
+		}
+		.square:hover {
+			transform: scale(1.05);
+			overflow:scroll;
+		}
+		.square:nth-child(1) {
+			background-image: linear-gradient(to right top, #1d4350, #265c73, #327a95, #4199b9, #5cb5db);
+		}
+		.square:nth-child(2) {
+			background-image: linear-gradient(to right top, #c94b4b, #d96565, #e67f80, #ee999a, #f5b3b5);
+		}
+		.square:nth-child(3) {
+			background-image: linear-gradient(to right top, #1e272e, #293744, #354f5b, #416a71, #4c8587);
+		}
+		.square:nth-child(4) {
+			background-image: linear-gradient(to right top, #1abc9c, #48c9b0, #76d7c4, #a3e4d9, #d1f1ed);
+		}
+		.square:nth-child(5) {
+			background-image: linear-gradient(to right top, #c0392b, #d35400, #e67e22, #f39c12, #f1c40f);
+		}
+		.square h2 {
+			color: #fff;
+			font-size: 28px;
+			text-align: center;
+			text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+			margin: 0;
+			padding: 0;
+			transition: all 0.2s ease-in-out;
+		}
+		.square:hover h2 {
+			transform: scale(1.2);
+		}
+        body {
+    background: linear-gradient(to bottom right, #0d161a, #0000ff);
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<a href="display1.html" class="square">
+			
+			<h2 id="first"></h2>
+		</a>
+		<a href="display2.html" class="square">
+            <h2 id="second"></h2>
+		</a>
+		<a href="display3.html" class="square">
+			<h2 id="third"></h2>
+		</a>
+		<a href="display4.html" class="square">
+			<h2 id="fourth"></h2>
+		</a>
+		<a href="display5.html" class="square">
+			<h2 id="fifth"></h2>
+		</a>
+			
+</body>
+<script>
+    const url='api.php';
+getdata();
+
+async function getdata(){
+    
+    const response= await fetch(url);
+    const data= await response.json();
+	
+    document.getElementById('first').innerHTML=data[0].name;
+    document.getElementById('second').innerHTML=data[1].name;
+	document.getElementById('third').innerHTML=data[2].name;
+	document.getElementById('fourth').innerHTML=data[3].name;
+	document.getElementById('fifth').innerHTML=data[4].name;
+}
+</script>
+</html>

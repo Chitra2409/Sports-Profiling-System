@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+ .bg-gradient {
+  height: 100vh;
+  background: linear-gradient(to bottom, #241e5c, #0a082b);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-position 0.5s ease-out;
+}
+
+.pricing-plans {
+  display: flex;
+  justify-content: space-between;
+  max-width: 800px;
+}
+
+.plan {
+  width: calc(50% - 20px);
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: #fff;
+}
+
+.plan:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.plan h3 {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.plan.plan-premium {
+  background-color: #f8f8f8;
+  color: #000;
+}
+
+.plan .price {
+  font-size: 48px;
+  margin-bottom: 32px;
+}
+
+.plan ul {
+  list-style: none;
+  margin-bottom: 32px;
+}
+
+.plan li {
+  margin-bottom: 8px;
+  margin-left: -45px;
+}
+
+button {
+  background-color: #ce58b4;
+  border: none;
+  border-radius: 24px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 16px 32px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #e21e79;
+}
+
+.plan-free {
+  background-color: #583c86;
+}
+
+.plan-free:hover {
+  background-color: #451274;
+}
+
+.plan-premium {
+  background-color: #f8f8f8;
+}
+
+.plan-premium:hover {
+  background-color: #cecece;
+}
+
+/* Add cursor interaction */
+.bg-gradient:hover {
+  background-position: center;
+}
+
+.bg-gradient:hover::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: linear-gradient(to right, #5a50b7, #d41872,
+  #ff0066, #f238b8, #41d1f4, #5a50b7, #ff0066);
+opacity: 0.6;
+pointer-events: none;
+transition: opacity 0.5s ease;
+}
+.bg-gradient:hover::after {
+content: '';
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+z-index: -1;
+background: linear-gradient(to bottom, #5a50b7, #d41872, #ff0066, #f238b8, #41d1f4, #5a50b7);
+opacity: 0.4;
+pointer-events: none;
+transition: opacity 0.5s ease;
+}
+
+.bg-gradient:hover::before,
+.bg-gradient:hover::after {
+opacity: 1;
+}
+    </style>
+ 
+ 
+ 
+ <div class="bg-gradient">
+    <div class="pricing-plans">
+      <a href="" class="plan plan-free">
+        <h3>Free</h3>
+        <p class="price"> Rs.0/month</p>
+        <ul>
+          <li>Upto 5 active bids</li>
+          <li>20 bids per month</li>
+          <li>Limited Support</li>
+        </ul>
+       
+      </a>
+      <a href="" class="plan plan-premium">
+        <h3>Premium</h3>
+        <p class="price">Rs.9999/month</p>
+        <ul>
+          <li>Unlimited active bids</li>
+          <li>No bid limit</li>
+          <li>Premium Support</li>
+        </ul>
+        <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_LQdBkek5HRBgKT" async> </script> </form>
+      </a>
+    </div>
+  </div>
+  
+  
+      
+</body>
+</html>

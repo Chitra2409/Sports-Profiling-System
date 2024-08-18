@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <style>
+        /* Add a background image */
+body {
+    background-image: url("https://images.pexels.com/photos/15362148/pexels-photo-15362148.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-size: cover;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Style the form container */
+  .form-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 800px;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  
+  /* Style the form groups */
+  .form-group {
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    height: 100px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Style the labels */
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  /* Style the divs where the info is displayed */
+  #name, #age, #gender, #dob, #education, #address, #city, #state, #email, #aadhar, #height, #weight, #batting, #runs, #average, #half, #centuries, #bowling, #wickets, #maiden, #hattrick, #speed, #other, #records, #achievements {
+    font-size: 12px;
+    color: #666;
+    word-wrap: break-word;
+   overflow:scroll;
+    
+    white-space: nowrap;
+    margin-top: 5px;
+  }
+  body {
+    
+    background-size: cover;
+  }
+  
+  .form-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1000px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  
+  label {
+    font-size: 20px;
+    font-weight: bold;
+    color: #444;
+  }
+  
+  .form-group div {
+    font-size: 16px;
+    color: #555;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .form-group div:hover {
+    background-color: #f9f9f9;
+  }
+  
+  #name {
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  
+  #age {
+    font-style: italic;
+    color: #7f8c8d;
+  }
+  
+  #gender {
+    text-transform: capitalize;
+    color: #16a085;
+  }
+  
+  #dob {
+    font-style: italic;
+    color: #7f8c8d;
+  }
+  
+  #education {
+    font-style: italic;
+    color: #7f8c8d;
+  }
+  
+  #address {
+    color: #2980b9;
+   
+   
+  }
+  
+  #city {
+    color: #2980b9;
+  }
+  
+  #state {
+    color: #2980b9;
+  }
+  
+  #email {
+    color: #e74c3c;
+  }
+  
+  #aadhar {
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  
+  #height {
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  
+  #weight {
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  
+  #batting {
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  
+  #runs {
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  
+  #average {
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  
+  #half {
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  
+  #centuries {
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  
+  #bowling {
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  
+  #wickets {
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  
+  #maiden {
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  
+  #hattrick {
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  
+  #speed {
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  
+  #other {
+    color: #7f8c8d;
+  }
+  
+  #records {
+    font-style: italic;
+    color: #7f8c8d;
+  }
+  
+  #achievements {
+    font-style: italic;
+    color: #7f8c8d;
+  }
+  a{
+    text-decoration: none;
+    text-align: center;
+   margin-top: 20px;
+   font-style: italic;
+    color: #7f8c8d;
+  }
+  
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <div id="name"></div>
+        </div>
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <div id="age"></div>
+        </div>
+        <div class="form-group">
+            <label for="gender">Gender:</label>
+            <div id="gender"></div>
+        </div>
+        <div class="form-group">
+            <label for="dob">Date of Birth:</label>
+            <div id="dob"></div>
+        </div>
+        <div class="form-group">
+            <label for="education">Education:</label>
+            <div id="education"></div>
+        </div>
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <div id="address"></div>
+        </div>
+        <div class="form-group">
+            <label for="city">City:</label>
+            <div id="city"></div>
+        </div>
+        
+        <div class="form-group">
+            <label for="state">State:</label>
+            <div id="state"></div>
+        </div>
+        <div class="form-group">
+            <label for="email">E-mail:</label>
+            <div id="email"></div>
+        </div>
+        <div class="form-group">
+            <label for="aadhar">Aadhar:</label>
+            <div id="aadhar"></div>
+        </div>
+        <div class="form-group">
+            <label for="height">Height:</label>
+            <div id="height"></div>
+        </div>
+        <div class="form-group">
+            <label for="weight">Weight:</label>
+            <div id="weight"></div>
+        </div>
+        <div class="form-group">
+            <label for="batting">Batting:</label>
+            <div id="batting"></div>
+        </div>
+        <div class="form-group">
+            <label for="runs">Runs:</label>
+            <div id="runs"></div>
+        </div>
+        <div class="form-group">
+            <label for="average">Average:</label>
+            <div id="average"></div>
+        </div>
+        <div class="form-group">
+            <label for="half">Half Centuries:</label>
+            <div id="half"></div>
+        </div>
+        <div class="form-group">
+            <label for="centuries">Centuries:</label>
+            <div id="centuries"></div>
+        </div>
+        <div class="form-group">
+            <label for="bowling">Bowling:</label>
+            <div id="bowling"></div>
+        </div>
+        <div class="form-group">
+            <label for="wickets">Wickets:</label>
+            <div id="wickets"></div>
+        </div>
+        <div class="form-group">
+            <label for="maiden">Maiden:</label>
+            <div id="maiden"></div>
+        </div>
+        <div class="form-group">
+            <label for="hattrick">Hattricks:</label>
+            <div id="hattrick"></div>
+        </div>
+        <div class="form-group">
+            <label for="speed">Speed:</label>
+            <div id="speed"></div>
+        </div>
+        <div class="form-group">
+            <label for="other">Others:</label>
+            <div id="other"></div>
+        </div>
+        <div class="form-group">
+            <label for="records">Records:</label>
+            <div id="records"></div>
+        </div>
+        <div class="form-group">
+            <label for="achievements">Achievements:</label>
+            <div id="achievements"></div>
+        </div>
+        <div class="form-group">
+          <label for="certificates">Certificates:</label>
+         <a href="" id="certificates">Certificates</a>
+      </div>
+      <div class="form-group">
+        <label for="aadharphoto">Aadhar Card:</label>
+       <a href="" id="aadharphoto"> Aadhar Card</a>
+    </div>
+    <div class="form-group">
+      <label for="passportphoto">Photograph:</label>
+     <a href="" id="passportphoto">Photograph</a>
+  </div>
+    </div>
+
+</body>
+<script>
+var data=JSON.parse( localStorage.getItem('data'));
+
+document.getElementById('name').innerHTML=data[11].name;
+    document.getElementById('age').innerHTML=data[11].age;
+    document.getElementById('gender').innerHTML=data[11].gender;
+    document.getElementById('dob').innerHTML=data[11].dob;
+    document.getElementById('education').innerHTML=data[11].education;
+    document.getElementById('address').innerHTML=data[11].address;
+    document.getElementById('city').innerHTML=data[11].city;
+    document.getElementById('state').innerHTML=data[11].state;
+    document.getElementById('email').innerHTML=data[11].email;
+    document.getElementById('aadhar').innerHTML=data[11].aadhar;
+    document.getElementById('height').innerHTML=data[11].height;
+    document.getElementById('weight').innerHTML=data[11].weight;
+    document.getElementById('batting').innerHTML=data[11].batting;
+    document.getElementById('runs').innerHTML=data[11].runs;
+    document.getElementById('average').innerHTML=data[11].average;
+    document.getElementById('half').innerHTML=data[11].half;
+
+    document.getElementById('centuries').innerHTML=data[11].centuries;
+    document.getElementById('bowling').innerHTML=data[11].bowling;
+    document.getElementById('wickets').innerHTML=data[11].wickets;
+    document.getElementById('maiden').innerHTML=data[11].maiden;
+    document.getElementById('hattrick').innerHTML=data[11].hattrick;
+    document.getElementById('speed').innerHTML=data[11].speed;
+    document.getElementById('other').innerHTML=data[11].other;
+    document.getElementById('records').innerHTML=data[11].records;
+    document.getElementById('achievements').innerHTML=data[11].achievements;
+    document.getElementById('certificates').href=data[11].certificates;
+    document.getElementById('aadharphoto').href=data[11].aadharphoto;
+    document.getElementById('passportphoto').href=data[11].passportphoto;
+
+
+</script>
+</html>

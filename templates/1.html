@@ -1,0 +1,273 @@
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Sports Profiling System</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Montserrat', sans-serif;
+        background-image: url("https://images.pexels.com/photos/15362148/pexels-photo-15362148.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px 50px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  header h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-left: 280px;
+  }
+  
+  header nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header nav ul li {
+    margin-left: 20px;
+  }
+  
+  header nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  header nav ul li a:hover {
+    color: #f00;
+  }
+  
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-top: 100px;
+  }
+  
+  main h2 {
+    font-size: 60px;
+    font-weight: bold;
+    margin: 0 0 20px 0;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  main p {
+    font-size: 24px;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  form {
+    margin-top: 50px;
+  }
+  
+  form h3 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  form label {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+ 
+  input[type=date], form textarea {    /* Change font family to 'Open Sans' */
+    font-family: 'Open Sans', sans-serif;
+
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  form textarea {
+    height: 100px;
+  }
+  
+  form button[type=submit] {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f00;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  form button[type=submit]:hover {
+    background-color: #fff;
+    color: #f00;
+  }
+  footer {
+  color: #fff;
+  font-family: Arial, sans-serif;
+  background-image: url("footer-bg.jpg");
+  background-size: cover;
+  text-align: center;
+  padding: 50px 0;
+}
+body {
+  padding-bottom: 100px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  input[type="file"] {
+    margin-bottom: 20px;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    background-color: #f1f1f1;
+    color: #666;
+    border-radius: 5px;
+  }
+
+  input[type="file"]:hover {
+    background-color: #e1e1e1;
+  }
+
+  input[type="file"]:focus {
+    outline: none;
+    box-shadow: 0 0 3px 3px rgba(0, 0, 255, 0.2);
+  }
+
+
+</style>
+</head>
+<body>
+  <header>
+    <h1>Sports Profiling System</h1>
+    
+  </header>
+  <main>
+    <h2>Player Information</h2>
+    <p>Please fill in the following information about the player:</p>
+    <form action="1.php" method="post" enctype="multipart/form-data">
+      <h3>Personal Information</h3>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" required><br>
+      <label for="gender">Gender:</label>
+     
+       
+        <input type="radio" name="gender" value="male">Male</td>  
+        <input type="radio" name="gender" value="female">Female</td>  
+        <input type="radio" name="gender" value="other">Other</td>  
+  
+    
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" required>
+      <label for="education">Education:</label>
+      <textarea id="education" name="education" required></textarea>
+      
+      <label for="address">Address:</label>
+      <textarea id="address" name="address" required></textarea>
+      <label for="city">City:</label>
+      <input type="text" id="city" name="city" required>
+      <label for="state">State:</label>
+      <input type="text" id="state" name="state" required>
+      <label for="email">E-mail:</label>
+      <input type="text" id="email" name="email" required>
+      <label for="aadhar">Aadhar Number:</label>
+      <input type="number" id="aadhar" name="aadhar" required>
+      <h3>Personal Appearance</h3>
+      <label for="height">Height (in cm):</label>
+      <input type="number" id="height" name="height" required>
+      <label for="weight">Weight (in kg):</label>
+      <input type="number" id="weight" name="weight" required><br><br><br><br>
+     
+      <h3>Skills and Achievements</h3>
+        <h4>Batting</h4>
+        <label for="batting">Batting Style:</label>
+      <input type="text" id="batting" name="batting" required>
+      <label for="runs">Runs:</label>
+      <input type="number" id="runs" name="runs" required>
+      <label for="average">Average:</label>
+      <input type="number" id="average" name="average" required>
+      <label for="half">Half Centuries Scored:</label>
+      <input type="number" id="half" name="half" required>
+      <label for="century">Centuries Scored:</label>
+      <input type="number" id="century" name="century" required>
+
+      <h4>Bowling</h4>
+        <label for="bowling">Bowling Style:</label>
+      <input type="text" id="bowling" name="bowling" required>
+      <label for="wickets">Wickets:</label>
+      <input type="wickets" id="wickets" name="wickets" required>
+      <label for="maiden">Maiden Overs:</label>
+      <input type="maiden" id="maiden" name="maiden" required>
+      <label for="hattrick">Hattricks:</label>
+      <input type="hattrick" id="hattrick" name="hattrick" required>
+      <label for="speed">Bowling Speed(in km/hr):</label>
+      <input type="speed" id="speed" name="speed" required><br><br><br><br>
+      <label for="other">Other Information:</label>
+      <textarea id="other" name="other"></textarea>
+
+      <label for="records-achievements">Records:</label><br><br>
+      <textarea id="records-achievements" name="records-achievements"></textarea>
+	<label for="Achievements">Achievements:</label>
+      <textarea id="Achievements" name="Achievements"></textarea>
+      
+      
+      <h3>Documents</h3>
+      <label for="certificates">Certificates:</label>
+      <input type="file" id="certificates" name="certificates" multiple required />
+      <label for="Aadharphoto">Aadhar Card:</label>
+      <input type="file" id="Aadharphoto" name="Aadharphoto" required />
+      <label for="passportphoto">Photograph:</label>
+      <input type="file" id="passportphoto" name="passportphoto" required />
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+  <footer>
+    <p>&copy; 2023 Sports Profiling System. All rights reserved.</p>
+    <p>A platform to showcase the talent in the world of sports.</p>
+  </footer>
+</body>
+</html>
+
+
+

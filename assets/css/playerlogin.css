@@ -1,0 +1,64 @@
+body {
+	background-image: url('https://images.pexels.com/photos/15362148/pexels-photo-15362148.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+	background-size: cover;
+	font-family: Arial, sans-serif;
+	color: #fff;
+}
+
+.login-box {
+	width: 300px;
+	margin: auto;
+	margin-top: 100px;
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	text-align: center;
+}
+
+h1 {
+	font-size: 36px;
+	margin-bottom: 30px;
+    color: white;
+}
+
+form {
+	text-align: left;
+}
+
+label {
+	display: block;
+	margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="password"] {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 20px;
+	border: none;
+	border-radius: 5px;
+	background-color: #f2f2f2;
+    color: rgb(38, 27, 197);
+}
+
+input[type="submit"] {
+	background-color: #ade70e;
+	color: rgb(30, 3, 32);
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+input[type="submit"]:hover {
+	background-color: #3e8e41;
+}
+
+a {
+	text-decoration: none;
+	color: #b5f30a;
+}
+
+a:hover {
+	text-decoration: underline;
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url('https://images.pexels.com/photos/15362148/pexels-photo-15362148.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .box {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            width: 300px;
+        }
+
+        h1 {
+        text-align: center;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    input[type="number"] {
+        border: none;
+        border-radius: 5px;
+        box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+        color: #333;
+        font-size: 18px;
+        padding: 10px;
+        margin-bottom: 20px;
+        width: 100%;
+        transition: box-shadow 0.3s ease-in-out;
+    }
+
+    input[type="number"]:focus {
+        box-shadow: inset 0 0 5px #cc0000;
+    }
+
+    .otp-info {
+    color: rgb(226, 36, 36);
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+   button {
+        background-color: #cc0000;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+        font-size: 24px;
+        padding: 10px 20px;
+        transition: background-color 0.3s ease-in-out;
+        width: 100%;
+    }
+
+   button:hover {
+        background-color: #e60000;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <p class="otp-info">An OTP has been sent to your registered email ID.</p>
+            <h1>Enter OTP</h1>
+           
+           
+            <form>
+                <label for="otp">OTP:</label>
+                <input type="number" id="otp" name="otp" required>
+               <button onclick="submit()">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+<script type="text/javascript">
+
+    var otp, data;
+    const email = localStorage.getItem("playersignup_email");
+    
+    const endpoint = `https://3lllp7yp3f.execute-api.us-east-1.amazonaws.com/dev/send_otp?email_address=${email}`;
+
+    getdata();
+    async function getdata() {
+
+        const response = await fetch(endpoint);
+        data = await response.text();
+       
+       
+
+    }
+
+    // Add event listener to the form submit event
+    document.querySelector('form').addEventListener('submit', function (event) {
+        event.preventDefault(); // prevent the default form submission behavior
+        submit();
+    });
+
+    function submit() {
+        otp = document.getElementById('otp').value;
+       
+        if (otp == data) {
+            alert('OTP Verified');
+            location.href = "http://localhost/saas/home.html"; // redirect to pricing.html
+        }
+    }
+
+</script>
